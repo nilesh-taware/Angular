@@ -1,0 +1,22 @@
+
+    table.tbstyle {
+      width: 100%;
+      background-color: #ffffff;
+      border-collapse: collapse;
+      border-width: 2px;
+      border-color: #fff200;
+      border-style: solid;
+      color: #000000;
+    }
+    
+    table.tbstyle td, table.tbstyle th {
+      border-width: 2px;
+      border-color: #fff200;
+      border-style: solid;
+      padding: 3px;
+    }
+    
+    table.tbstyle thead {
+      background-color: #ebe11e;
+    }
+    
