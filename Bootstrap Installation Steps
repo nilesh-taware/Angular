@@ -1,0 +1,15 @@
+Angular.json file modifications=>
+
+"styles": [
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+
+IF BOOTSTRAP IN NOT WORKING AFTER ABOVE CHANGES JUST IMPORT FOLLOWING INTO GLOBAL style.css file
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
