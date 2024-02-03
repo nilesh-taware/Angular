@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { bootstrapApplication } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -11,19 +10,12 @@ import { bootstrapApplication } from '@angular/platform-browser';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Image On Click Event Example';
-  displaydate=Date();
-   imgCount=0;
-   btnClickCount=0;
-  onImageClick()
-  {
-    this.imgCount++;
-    alert('You Clicked Image..!'+'You Clicked Image:');
-  }
-  btnClick()
+  title = 'bcom-This is practice app for student';
+  btnClickCount=0;
+  isServerActive=true;
+  onBtnClick()
   {
     this.btnClickCount++;
-    alert('You clicked button.');
+    //alert('You Clicked Button.'+this.btnClickCount);
   }
-  
 }

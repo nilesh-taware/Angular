@@ -1,6 +1,6 @@
 <div style="text-align:center">
   <h1>{{ title }}</h1>
-  <button class="btn btn-success"  (click)="toggleActive()">Toggle Active</button>
+  <button class="btn btn-success" (click)="toggleActive()">Toggle Active</button>
 
   <ng-container *ngIf="isActive; else inactiveContent">
     <h2>Active Content</h2>
