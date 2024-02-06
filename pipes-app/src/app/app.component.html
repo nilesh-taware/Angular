@@ -5,13 +5,17 @@
   Click the toggle button to change formats.</p>
 
 <button class="btnStyle" type="button" (click)="toggleFormat()">Toggle Format</button>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<h1>{{title | uppercase | slice:1}}</h1>
+<h2>{{caps | lowercase}}</h2>
+<h1>{{today | date:'short'}}</h1>
+
+
+<h2>{{myJSON | json}}</h2>
+<h3>{{Salary | testPipe}}</h3>
+
+<h3>My Salary:{{Salary | currency:''}}</h3>
+
 
 
 <router-outlet />

@@ -1,0 +1,11 @@
+
+
+  <ul class="list-group">
+    <li class="list-group-item active"><h1>Product List</h1></li>
+  <li class="list-group-item" *ngFor="let product of products">
+    <strong>{{product.name}} - {{product.price |currency:'INR'}}</strong>
+  </li>
+</ul>
+  
+
+<router-outlet />

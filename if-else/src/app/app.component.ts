@@ -14,6 +14,8 @@ export class AppComponent {
   
   title = 'Angular If Else Statement Example';
   isActive = false;
+  
+  number=10;
 
   toggleActive() {
     this.isActive = !this.isActive;

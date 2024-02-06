@@ -11,4 +11,18 @@
     <h2>Inactive Content</h2>
     <p>This is the inactive content.</p>
   </ng-template>
+
+  <h1>Multiplication Table of {{ number }}</h1>
+<table>
+  <tr>
+    <th>x</th>
+    <th *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">{{ i }}</th>
+  </tr>
+  <tr *ngFor="let j of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+    <td>{{ j }}</td>
+    <td *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">{{ j * i }}</td>
+  </tr>
+</table>
+
+
 </div>
