@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UpperCasePipe,LowerCasePipe,DatePipe,CurrencyPipe,JsonPipe,SlicePipe} from '@angular/common';
+import { LowerCasePipe,DatePipe,CurrencyPipe,JsonPipe,SlicePipe} from '@angular/common';
 import { TestPipePipe } from './pipes/test-pipe.pipe';
+import { UpperCasePipe } from '@angular/common';
+import { CurrencyExchangePipe } from './pipes/currencyExchange.pipe';
 @Component({
   selector: 'app-root',
   standalone: true,

@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   
   title = 'Angular If Else Statement Example';
-  isActive = false;
+  isActive = true;
   
   number=10;
 
