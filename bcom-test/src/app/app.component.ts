@@ -12,10 +12,16 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'bcom-This is practice app for student';
   btnClickCount=0;
+  isTodaySunday=false;
   isServerActive=true;
   onBtnClick()
   {
     this.btnClickCount++;
     //alert('You Clicked Button.'+this.btnClickCount);
+  }
+  onBtntClick()
+  {
+    this.isTodaySunday=!this.isTodaySunday;
+
   }
 }

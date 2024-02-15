@@ -11,3 +11,10 @@
 </ng-template>
 </div>
 <p class="alert alert-success">You clicked button :{{btnClickCount}}</p>
+
+
+<button class="btn btn-primary" (click)="onBtntClick()">Check</button>
+<div *ngIf="isTodaySunday">
+<div><p class="alert alert-success">Congratulation today is sunday.!!</p></div>
+<div *ngIf="!isTodaySunday"><p class="alert alert-danger">Sorry it's not sunday.??</p></div>
+

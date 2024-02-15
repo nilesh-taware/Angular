@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'dir-style';
-  isActive=false;
+  isActive=true;
   btnSwitch()
   {
     this.isActive=!this.isActive
