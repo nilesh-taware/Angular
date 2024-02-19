@@ -20,6 +20,9 @@ export class AppComponent {
 
   products: Product[] = [
     {name: 'Maggie', price: 10.99},
+    {name: 'Maggie', price: 10.99},
+    {name: 'Maggie', price: 10.99},
+    {name: 'Maggie', price: 10.99}
     
   ];
 }
