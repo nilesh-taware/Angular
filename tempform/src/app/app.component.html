@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+  <input class="form-control" type="text" id="name" [(ngModel)]="name" name="name">
+  <br>
+  <label for="email">Email:</label>
+  <input class="form-control" type="email" id="email" [(ngModel)]="email" name="email">
+  <br>
+  <button class="btn btn-success" type="submit">Submit</button>&nbsp;
+  <button class="btn btn-primary" type="reset">Reset</button>
+</form>
+<p>Name: {{ name }}</p>
+<p>Email: {{ email }}</p>
