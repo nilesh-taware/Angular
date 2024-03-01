@@ -1,21 +1,11 @@
+<div class="container">
 <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
-  <div>
-    <label>
       Name:
-      <input formControlName="name" placeholder="Your name" required="true">
-    </label>
-  </div>
-  <div>
-    <label>
+      <input class="form-control" formControlName="name" placeholder="Your name" required="true">
       Email:
-      <input formControlName="email" placeholder="Your email" email="">
-    </label>
-  </div>
-  <div>
-    <label>
+      <input class="form-control" formControlName="email" placeholder="Your email" email="">
       Message:
-      <input formControlName="message" placeholder="Your message">
-    </label>
+      <input class="form-control" formControlName="message" placeholder="Your message">
+   <button class="btn btn-primary" type="submit">Send</button>
+  </form>
   </div>
-  <button type="submit">Send</button>
-</form>

@@ -1,20 +1,6 @@
-<h1>
-  {{title}}
-</h1>
-<button (click)="onBtnClick()" type="button" class="btn btn-primary">Click Me</button>
-<div *ngIf="isServerActive;else notActive">
-  <p class="alert alert-success">Congratulations Server Is Active.!</p>
+<div>
+<button class="btn btn-success" [routerLink]="['contact']">Contact us</button>
 </div>
 <div>
-<ng-template #notActive>
-<p class="alert alert-danger">Sorry Server Is Not Running.?</p>
-</ng-template>
+  <router-outlet></router-outlet>
 </div>
-<p class="alert alert-success">You clicked button :{{btnClickCount}}</p>
-
-
-<button class="btn btn-primary" (click)="onBtntClick()">Check</button>
-<div *ngIf="isTodaySunday">
-<div><p class="alert alert-success">Congratulation today is sunday.!!</p></div>
-<div *ngIf="!isTodaySunday"><p class="alert alert-danger">Sorry it's not sunday.??</p></div>
-

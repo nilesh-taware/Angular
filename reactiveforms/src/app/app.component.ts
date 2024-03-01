@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ReactiveFormsModule,FormGroup,Validators,FormBuilder  } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ReactiveFormsModule,],
+  imports: [CommonModule,RouterOutlet,ReactiveFormsModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      name: ['Sammy', Validators.required],
+      name: ['Nilesh', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(15)]],
     });
