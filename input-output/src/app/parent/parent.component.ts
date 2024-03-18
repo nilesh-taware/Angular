@@ -1,6 +1,6 @@
-import { Component,Input,Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
-import { EventEmitter } from '@angular/core';
+//import { EventEmitter} from '@angular/core';
 @Component({
   selector: 'app-parent',
   standalone: true,
