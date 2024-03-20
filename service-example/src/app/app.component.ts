@@ -14,10 +14,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
     students: any[];
-    constructor(private studentService: StudentService) {
-        this.students = this.studentService.getStudents();
+    constructor(private injectstudentService: StudentService) {
+        this.students = this.injectstudentService.getStudents();
     }
     ngOnInit() {
-      this.students = this.studentService.getStudents();
+      this.students = this.injectstudentService.getStudents();
   }
 }
