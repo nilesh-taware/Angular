@@ -1,5 +1,5 @@
 import { CommonModule, JsonPipe } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -30,13 +30,22 @@ export class AppComponent implements OnInit {
     {
       console.log(data);
       this.getjsonValue=data;
-      this.getjsonValue =  this.getjsonValue.SayHelloToService();
+      this.getjsonValue =  this.getjsonValue;
 
     });
   }
   public postMethod()
   {
-    this.http.post('https://jsonplaceholder.typicode.com/posts',{}).subscribe((data)=>
+    const header=new HttpHeaders({
+      contentType:'application/json'
+    })
+    let body={
+      title:'Test title',
+      body:'Test body',
+      userId:1,
+    };
+    this.http.post('https://jsonplaceholder.typicode.com/posts',body,
+    {headers:header}).subscribe((data)=>
     {
       console.log(data);
       this.postjsonValue=data;
@@ -46,7 +55,8 @@ export class AppComponent implements OnInit {
 
   public putMethod()
   {
-    this.http.put('https://jsonplaceholder.typicode.com/posts/1',{}).subscribe((data)=>
+    this.http.put('https://jsonplaceholder.typicode.com/posts/1',
+    {}).subscribe((data)=>
     {
       console.log(data);
       this.putjsonValue=data;

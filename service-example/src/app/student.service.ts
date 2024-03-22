@@ -8,8 +8,8 @@ export class StudentService {
   getStudents(): any[] {
     return [
       {
-        ID: 'std101', FirstName: 'Rohit', LastName: 'Tiwary',
-        Branch: 'CSE', DOB: '29/02/1998', Gender: 'Female'
+        ID: 'std101', FirstName: 'Rohit', LastName: 'Joshi',
+        Branch: 'CSE', DOB: '29/02/1998', Gender: 'Male'
     },
     {
         ID: 'std102', FirstName: 'Saurabh', LastName: 'Khatri',
