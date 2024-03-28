@@ -1,0 +1,30 @@
+
+    <form id="contactForm" [formGroup]="form" (ngSubmit)="submit()">
+
+      <input matInput placeholder="firstname" class="form-control"  name="firstname">
+
+
+    <br>
+
+      <input matInput placeholder="lastname" class="form-control"  name="lastname">
+
+    <br>
+
+      <input matInput placeholder="email" class="form-control"  name="email">
+
+    <br>
+
+      <textarea rows="4" cols="50" matInput placeholder="message" class="form-control"  name="message"></textarea>
+
+    <br>
+    <button id="btnSubmit" mat-raised-button type="submit" color="primary">Submit</button>
+    </form>
+
+
+<strong>{{form.value.firstname}} </strong>
+<br>
+<strong>{{form.value.lastname}} </strong>
+<br>
+<strong>{{form.value.email}} </strong>
+<br>
+<strong>{{form.value.message}} </strong>

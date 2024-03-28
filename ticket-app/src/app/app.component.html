@@ -1,0 +1,48 @@
+<form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="booking.name" required>
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" [(ngModel)]="booking.address" required>
+  </div>
+  <div>
+    <label for="contactNo">Contact No.:</label>
+    <input type="text" id="contactNo" name="contactNo" [(ngModel)]="booking.contactNo" required>
+  </div>
+  <div>
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="booking.gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div>
+    <label for="bookingDate">Date of Booking:</label>
+    <input type="date" id="bookingDate" name="bookingDate" [(ngModel)]="booking.bookingDate" required>
+  </div>
+  <div>
+    <label for="journeyDate">Date of Journey:</label>
+    <input type="date" id="journeyDate" name="journeyDate" [(ngModel)]="booking.journeyDate" required>
+  </div>
+  <div>
+    <label for="passengerName">Name of Passengers:</label>
+    <input type="text" id="passengerName" name="passengerName" [(ngModel)]="booking.passengerName" required>
+  </div>
+  <button type="submit" [disabled]="!ticketForm.form.valid">Submit</button>
+</form>
+
+<div *ngIf="booking">
+  <h2>E-Ticket</h2>
+  <p>Name: {{ booking.name }}</p>
+  <p>Address: {{ booking.address }}</p>
+  <p>Contact No.: {{ booking.contactNo }}</p>
+  <p>Gender: {{ booking.gender }}</p>
+  <p>Date of Booking: {{ booking.bookingDate }}</p>
+  <p>Date of Journey: {{ booking.journeyDate }}</p>
+  <p>Name of Passengers: {{ booking.passengerName }}</p>
+</div>
+
