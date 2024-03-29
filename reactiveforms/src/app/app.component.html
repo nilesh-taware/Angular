@@ -1,11 +1,64 @@
-<div class="container">
-<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
-      Name:
-      <input class="form-control" formControlName="name" placeholder="Your name" required="true">
-      Email:
-      <input class="form-control" formControlName="email" placeholder="Your email" email="">
-      Message:
-      <input class="form-control" formControlName="message" placeholder="Your message">
-   <button class="btn btn-primary" type="submit">Send</button>
-  </form>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="firstName" />
+
+  <div
+    *ngIf="signUpForm.controls.firstName.invalid &&
+    (signUpForm.controls.firstName.dirty || signUpForm.controls.firstName.touched)"
+  >
+    <div *ngIf="signUpForm.controls.firstName.errors?.['required']">
+     <p class="alert alert-danger">First name is required.</p>
+    </div>
+    <div *ngIf="signUpForm.controls.firstName.errors?.['minlength']">
+      <p class="alert alert-danger">First name must be at least 5 characters long.</p>
+    </div>
   </div>
+  <br/>
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="lastName" />
+
+  <div
+    *ngIf="signUpForm.controls.lastName.invalid && (signUpForm.controls.firstName.dirty || signUpForm.controls.lastName.touched)"
+  >
+    <div *ngIf="signUpForm.controls.lastName.errors?.['required']">
+      <p  class="alert alert-danger">Last name is required.</p>
+    </div>
+    <div *ngIf="signUpForm.controls.lastName.errors?.['minlength']">
+      <p>Last name must be at least 5 characters long.</p>
+    </div>
+  </div>
+  <br />
+
+  <div  formGroupName="address">
+    <h2>Address</h2>
+
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street" />
+    <br />
+
+    <div
+      *ngIf="signUpForm.controls.address.controls.street.invalid && (signUpForm.controls.address.controls.street.dirty || signUpForm.controls.address.controls.street.touched)"
+    >
+      <div *ngIf="signUpForm.controls.address.controls.street.errors?.['required']">
+        <p>Street name required</p>
+      </div>
+      <div
+        *ngIf="signUpForm.controls.address.controls.street.errors?.['minlength']"
+      >
+      <p class="alert alert-danger">street name must be at least 5 characters long.</p>
+      </div>
+    </div>
+
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city" />
+    <br />
+
+    <label for="region">Region: </label>
+    <input id="region" type="text" formControlName="region" />
+    <br />
+
+    <button type="button" (click)="updateProfile()">Update Profile</button>
+    <button type="submit" [disabled]="!signUpForm.valid">Submit Profile</button>
+  </div>
+</form>

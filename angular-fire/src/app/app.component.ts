@@ -1,13 +1,15 @@
-
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-
+import{AngularFireModule}from '@angular/fire/compat';
+import { environment } from '../environments/environment.development';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,
-    ReactiveFormsModule],
+    ReactiveFormsModule,
+  AngularFireModule.initializeApp(environment.firebase),
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
