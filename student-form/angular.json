@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-fire": {
+    "student-form": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-fire",
+            "outputPath": "dist/student-form",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -48,13 +48,7 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -63,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-fire:build:production"
+              "buildTarget": "student-form:build:production"
             },
             "development": {
-              "buildTarget": "angular-fire:build:development"
+              "buildTarget": "student-form:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-fire:build"
+            "buildTarget": "student-form:build"
           }
         },
         "test": {

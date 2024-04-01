@@ -1,0 +1,27 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div>
+     <label for="name">Name:</label>
+     <input type="text" id="name" formControlName="name">
+     <div *ngIf="userForm.controls.name.errors?.['required']">Name is required.</div>
+     <div *ngIf="userForm.controls.name.errors?.['pattern']">Name should contain characters only.</div>
+  </div>
+  <div>
+     <label for="mobile">Mobile Number:</label>
+     <input type="text" id="mobile" formControlName="mobile">
+     <div *ngIf="userForm.controls.mobile.errors?.['required']">Mobile number is required.</div>
+     <div *ngIf="userForm.controls.mobile.errors?.['pattern']">Mobile number should contain 10 digits.</div>
+  </div>
+  <div>
+     <label for="pincode">Pincode:</label>
+     <input type="text" id="pincode" formControlName="pincode">
+     <div *ngIf="userForm.controls.pincode.errors?.['required']">Pincode is required.</div>
+     <div *ngIf="userForm.controls.pincode.errors?.['pattern']">Pincode should contain 6 digits.</div>
+  </div>
+  <div>
+     <label for="email">Email:</label>
+     <input type="email" id="email" formControlName="email">
+     <div *ngIf="userForm.controls.email.errors?.['required']">Email is required.</div>
+     <div *ngIf="userForm.controls.email.errors?.['email']">Please enter a valid email address.</div>
+  </div>
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+ </form>

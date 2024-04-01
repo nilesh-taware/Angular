@@ -16,19 +16,23 @@ export class AppComponent {
       Validators.required,
       Validators.minLength(5)
     ]),
+
     lastName: new FormControl("", [
       Validators.required,
       Validators.minLength(5)
     ]),
+
     address: new FormGroup({
       street: new FormControl("", [
         Validators.required,
         Validators.minLength(5)
       ]),
+
       city: new FormControl("", [Validators.required,
          Validators.minLength(5)]),
       region: new FormControl("", [Validators.required])
     })
+
   });
 
   updateProfile() {
@@ -36,7 +40,9 @@ export class AppComponent {
       firstName: "Nilesh",
       lastName: "Taware",
       address: {
-        street: "127 Happy Street"
+        street: "127 Happy Street",
+        city:"AMD",
+        region:"IND"
       }
     });
   }
