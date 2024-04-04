@@ -1,0 +1,19 @@
+<div class="form-container">
+  <p style="text-align: center; font-size: 25px;">Contact</p>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+      <div *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched">Name is required</div>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+      <div *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">Email is required</div>
+      <div *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched">Invalid email format</div>
+
+      <label for="message">Message:</label>
+      <textarea id="message" formControlName="message" rows="4"></textarea>
+      <div *ngIf="userForm.get('message')?.hasError('required') && userForm.get('message')?.touched">Message is required</div>
+
+      <button type="submit">Submit</button>
+  </form>
+</div>
