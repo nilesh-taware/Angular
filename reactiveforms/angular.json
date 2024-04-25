@@ -32,7 +32,7 @@
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "./node_modules/jquery/dist/jquery.min.js",
-    "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -92,7 +92,22 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "codeCoverage": true
+          }
+        },
+        "nightwatch-run": {
+          "builder": "@nightwatch/schematics:nightwatch",
+          "options": {
+            "devServerTarget": "reactiveforms:serve",
+            "tsConfig": "../nightwatch/tsconfig.e2e.json",
+            "config": "./nightwatch.conf.js",
+            "env": "chrome"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "reactiveforms:serve:production"
+            }
           }
         }
       }

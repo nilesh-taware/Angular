@@ -12,18 +12,21 @@ import { bootstrapApplication } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'Image On Click Event Example';
+
   displaydate=Date();
+
    imgCount=0;
    btnClickCount=0;
+
   onImageClick()
   {
     this.imgCount++;
-    alert('You Clicked Image..!'+'You Clicked Image:');
+
   }
   btnClick()
   {
     this.btnClickCount++;
-    alert('You clicked button.');
+    
   }
-  
+
 }

@@ -1,8 +1,9 @@
 <div style="text-align:center">
   <h1>{{ title }}</h1>
+
   <button class="btn btn-success" (click)="toggleActive()">Toggle Active</button>
 
-  <div *ngIf="isActive;else inactiveContent">
+<div *ngIf="isActive;else inactiveContent">
     <h2>Active Content</h2>
     <p>This is the active content.</p>
   </div>
@@ -11,6 +12,11 @@
     <h2>Inactive Content</h2>
     <p>This is the inactive content.</p>
   </ng-template>
+
+
+
+
+
 
   <h1>Multiplication Table of {{ number }}</h1>
 <table>

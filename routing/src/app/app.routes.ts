@@ -9,5 +9,6 @@ export const routes: Routes = [
   { path: 'about', component:AboutusComponent },
   {path:'contact',component:ContactusComponent},
   {path:'notfound',component:PagenotfoundComponent},
-  {path:'gallery',component:GalleryComponent}
+  {path:'gallery',component:GalleryComponent},
+  {path:'*',component:PagenotfoundComponent}
 ];

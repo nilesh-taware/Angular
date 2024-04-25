@@ -18,6 +18,6 @@ name: any;
 onSubmit(): void {
     console.log('Name:', this.name);
     console.log('Email:', this.email);
-    
+
   }
 }
