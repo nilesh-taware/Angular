@@ -12,6 +12,7 @@ import { CommonModule } from "@angular/common";
 export class AppComponent {
 
   signUpForm = new FormGroup({
+    
     firstName: new FormControl("", [
       Validators.required,
       Validators.minLength(5)

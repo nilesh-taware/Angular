@@ -1,12 +1,12 @@
 <p>Your Birth Date is {{ birthday | date |uppercase}}</p>
 
 <p>The hero's birthday is {{ birthday | date:format }}<br> in "{{format}}" format.
-  
+
   Click the toggle button to change formats.</p>
 
 <button class="btnStyle" type="button" (click)="toggleFormat()">Toggle Format</button>
 
-<h1>{{title | uppercase | slice:1}}</h1>
+<h1>{{title | uppercase | slice:2}}</h1>
 <h2>{{caps | lowercase}}</h2>
 <h1>{{today | date:'short'}}</h1>
 

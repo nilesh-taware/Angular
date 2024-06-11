@@ -1,33 +1,32 @@
-
 <h3 align="center">
-    Assignment List Management
-    <small class="text-muted">Master In Computer Application[MCA]</small>
+  Assignment List Management
+  <small class="text-muted">Master In Computer Application[MCA]</small>
 </h3>
 
-<input class="form-control" type="text" #newNote><br>
+  <input class="form-control" placeholder="Enter notes title" type="text" #newNote/><br />
 
-<div style="text-align: center;">
-  <button class="btn btn-success" (click)="addNotes(newNote.value)">Add Notes To List</button>
+
+<div style="text-align: center">
+  <button class="btn btn-success"(click)="addNotes(newNote.value)">
+    Add Notes To List
+  </button>
 </div>
 
-
 <table class="table">
- <thead>
+  <thead>
     <tr>
       <th>Notes Title</th>
       <th>Actions</th>
     </tr>
- </thead>
- <tbody>
+  </thead>
+  <tbody>
     <tr *ngFor="let note of notes">
-      <td>{{note.description}}</td>
+      <td>{{ note.description }}</td>
       <td>
-        <button class="btn btn-danger" (click)="deleteNotes(note.id)">Delete Notes</button>
+        <button class="btn btn-danger" (click)="deleteNotes(note.id)">
+          Delete Notes
+        </button>
       </td>
     </tr>
- </tbody>
+  </tbody>
 </table>
-
-
-
-

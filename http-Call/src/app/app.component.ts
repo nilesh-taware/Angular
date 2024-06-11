@@ -16,9 +16,7 @@ export class AppComponent implements OnInit {
   public postjsonValue:any;
   public putjsonValue:any;
   constructor(private http:HttpClient)
-  {
-
-  }
+  {}
   ngOnInit(): void {
     this.getMethod();
     this.postMethod();
