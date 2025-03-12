@@ -1,0 +1,10 @@
+<div>
+  <label for="rateFilter">Filter by Rate:</label>
+  <input id="rateFilter" type="number" [(ngModel)]="selectedRate" placeholder="Enter rate">
+</div>
+
+<ul>
+  <li *ngFor="let product of products | filterByRate: selectedRate">
+    {{ product.name }} - Rate: {{ product.rate }}
+  </li>
+</ul>

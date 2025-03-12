@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 import { trigger, state, style, animate, transition } from '@angular/animations';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 
@@ -41,7 +40,6 @@ export class AppComponent {
   isOpen = false;
   imageUrl = 'https://images.unsplash.com/photo-1591154669695-5f2a8d20c089?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
-  //constructor() {}
 
   toggle() {
     this.isOpen = !this.isOpen;

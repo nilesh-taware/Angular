@@ -1,0 +1,28 @@
+<div>
+  <h1>Login</h1>
+  <input type="text" placeholder="Username*" #username>
+  <input type="password" placeholder="Password*" #password>
+  <button type="button" (click)="verify_userpass(username.value, password.value)">Submit</button>
+  <div>
+    <p>{{message}}</p>
+  </div>
+</div>
+
+<div *ngIf="loginservice.logged">
+  <h2>Welcome, {{login.username}}!</h2>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<form>
+  <!-- Email input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+</form>

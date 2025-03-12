@@ -1,0 +1,30 @@
+<div class="container">
+  <button class="btn btn-primary" type="button" (click)="BillTotal()"> Display</button>
+  <h1>{{title}}</h1>
+  <div *ngIf="displayTable">
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Product Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>{{nameofProduct}}</td>
+            <td>{{priceofProduct}}</td>
+            <td>{{productQuantity}}</td>
+          </tr>
+          <tr>
+            <td>Total Bill:</td>
+            <td>{{totalBill | currency:'INR'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

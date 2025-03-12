@@ -15,6 +15,9 @@ import { NgModule } from '@angular/core';
   styleUrl: './task-item.component.css'
 })
 export class TaskItemComponent {
+addTask($event: Event) {
+throw new Error('Method not implemented.');
+}
 
   @Input() task: Task | undefined;
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();

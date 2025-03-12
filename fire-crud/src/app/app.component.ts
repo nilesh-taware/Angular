@@ -8,6 +8,8 @@ import { SharedService } from './shared.service';
 })
 export class AppComponent {
   title = 'fire-crud';
+  sharedService: any;
+  router: any;
   constructor(private service: SharedService) {}
   notes: any = [];
   refreshNotes() {
@@ -31,4 +33,5 @@ export class AppComponent {
       this.refreshNotes();
     });
   }
+  
 }

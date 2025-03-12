@@ -1,0 +1,28 @@
+<div class="container">
+  <button class="btn btn-primary" type="button" (click)="displayGames()">
+    Display
+  </button>
+  <h1>{{ title }}</h1>
+  <div *ngIf="displayTable">
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Game Name</th>
+            <th scope="col">Player Count</th>
+            <th scope="col">Viewer Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let game of gameList; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ game.name }}</td>
+            <td>{{ game.players }}</td>
+            <td>{{ game.viewerCount }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
