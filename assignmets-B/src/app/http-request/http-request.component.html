@@ -1,0 +1,20 @@
+<div class="container" style="background-color: aquamarine;">
+<h1>Http Call Using Rest API</h1><br><br>
+
+</div>
+<br>
+
+
+<div class="container">
+  <div>
+    <button class="btn btn-success" (click)="getallUser()">Display User</button>
+  </div> <br> <br>
+  <select class="form-select" aria-label="Default select example">
+    @for (item of userList; track $index) {
+      <option>{{item.name}}</option>
+    }
+  </select>
+</div> <br><br>
+<div class="container" style="background-color: azure;">
+
+

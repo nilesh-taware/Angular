@@ -1,0 +1,22 @@
+<div class="container" style="background-color: cornflowerblue;">
+  <h1>Student Data Filtered Using Order By Name Using OrderBy Pipe</h1>
+</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students | orderBy: 'name'">
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.grade }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

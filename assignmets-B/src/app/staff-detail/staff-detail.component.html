@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let staff of staffDetails;let i= index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{staff.id}}</td>
+    <td>{{staff.name}}</td>
+    <td>{{staff.department}}</td>
+    <td>{{staff.position}}</td>
+    </tr>
+    </tbody>
+</table>

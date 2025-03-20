@@ -1,0 +1,151 @@
+<div class="container" style="background-color: blanchedalmond">
+  <h1>Event Booking System</h1>
+</div>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Ticket Booking System</h2>
+  <form (submit)="bookTicket($event)">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        [(ngModel)]="userName"
+        name="name"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="event" class="form-label">Select Event</label>
+      <select
+        id="event"
+        class="form-control"
+        [(ngModel)]="selectedEvent"
+        name="event"
+        required
+      >
+        <option *ngFor="let event of eventList" [value]="event">
+          {{ event }}
+        </option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Select Seats</label>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let seat of seatNumbers">
+          <div
+            class="card text-center"
+            [ngClass]="{
+              'bg-success text-white': selectedSeats.includes(seat)
+            }"
+            (click)="toggleSeatSelection(seat)"
+          >
+            <div class="card-body">
+              <h5 class="card-title">Seat {{ seat }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Book Now</button>
+  </form>
+  <div *ngIf="bookingConfirmation" class="alert alert-success mt-4">
+    <strong>Success!</strong> {{ bookingConfirmation }}
+  </div>
+</div>
+<div class="container" style="background-color: aquamarine">
+  <h1>Bus Booking SYstem</h1>
+</div>
+<!-- bus booking template code start's here -->
+<div class="container">
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Bus Booking Application</h1>
+
+    <!-- List of Available Buses -->
+    <div *ngIf="!selectedBus">
+      <h2>Available Buses</h2>
+      <div class="list-group">
+        <button
+          *ngFor="let bus of availableBuses"
+          (click)="selectBus(bus)"
+          class="list-group-item list-group-item-action"
+        >
+          <strong>{{ bus.busName }}</strong> - Departs at
+          {{ bus.departureTime }} | Arrives at {{ bus.arrivalTime }} | Seats
+          Available: {{ bus.seatsAvailable }} | Fare: {{ bus.fare }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div *ngIf="selectedBus" class="card mt-4">
+      <div class="card-body">
+        <h2 class="card-title">Book {{ selectedBus.busName }}</h2>
+        <p class="card-text">
+          Departure: {{ selectedBus.departureTime }} | Arrival:
+          {{ selectedBus.arrivalTime }} | Fare: ${{ selectedBus.fare }}
+        </p>
+
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="passengerName">Passenger Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="passengerName"
+              [(ngModel)]="passengerName"
+              name="passengerName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="passengerAge">Passenger Age</label>
+            <input
+              type="number"
+              class="form-control"
+              id="passengerAge"
+              [(ngModel)]="passengerAge"
+              name="passengerAge"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="passengerGender">Passenger Gender</label>
+            <select
+              class="form-control"
+              id="passengerGender"
+              [(ngModel)]="passengerGender"
+              name="passengerGender"
+              required
+            >
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="seatNumber">Seat Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="seatNumber"
+              [(ngModel)]="seatNumber"
+              name="seatNumber"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">
+            Confirm Booking
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary mt-3 ml-2"
+            (click)="resetForm()"
+          >
+            Back to Bus List
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+pdf-viewer {
+  height: 90vh; /* Set the height of the PDF viewer */
+  width: 100%; /* Set the width of the PDF viewer */
+  border: 1px solid #ccc; /* Add a border */
+}

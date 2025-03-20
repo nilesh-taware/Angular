@@ -1,0 +1,50 @@
+<div class="container" style="background-color: cornsilk">
+  <h1>Static Filter On Array Object</h1>
+</div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let data of userData | filterBy : ['isActive'] : ['false'];
+          let i = index
+        "
+      >
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ data.name }}</td>
+        <td>{{ data.isActive }}</td>
+        <td>{{ data.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container" style="background-color: cadetblue">
+  <h1>Dynamic Filter On Array Object</h1>
+</div>
+<div class="container">
+  <input class="form-control" [(ngModel)]="searchTerm" placeholder="Search user" />
+  <div *ngFor="let user of userData | filterBy : ['name'] : this.searchTerm">
+    {{ user.name }}
+  </div>
+</div>
+<div class="container" style="background-color: aquamarine;">
+  <h1>Angular Inbuild Pipes</h1>
+</div>
+<div class="container">
+  <p style="background-color: beige;">Purchases Printer from {{companyName}} for an amount of {{purchaseAmount|currency:'INR'}}on Date:{{purchaseDate | date}}</p>
+</div>
+<div class="container">
+  <h1 style="background-color: burlywood;">Creating Custom Pipes In Angular</h1>
+  <p></p>
+</div>
+
+<p>Hello {{myName  }}</p>
+
