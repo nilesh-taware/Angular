@@ -13,6 +13,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { NewsComponent } from './news/news.component';
 
 export const routes: Routes = [
+
+  {
+    path:'',
+    redirectTo:'login',
+    pathMatch:'full'
+  },
   {
     path: 'staff',
     component: StaffDetailComponent,
@@ -41,6 +47,10 @@ export const routes: Routes = [
   },
   {
     path:'syllabus',component:SyllabusComponent
+  },
+  {
+    path:'login',
+    component:LoginComponent
   }
 
 ];

@@ -11,7 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './news.component.css'
 })
 export class NewsComponent {
-  news: any[] = [];
+  news: any[] = [];//to store all news in class file
+  //we don't know data type of new
 
   constructor(private newsService: NewsService) {}
 

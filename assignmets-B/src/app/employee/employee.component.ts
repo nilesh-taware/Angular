@@ -15,7 +15,8 @@ export class EmployeeComponent {
 
     {id:1,name:'Nil MEvada',dept:'IT',city:'Ahmedabad'},
     {id:2,name:'Nilesh Taware',dept:'IT',city:'Mumbai'},
-    {id:3,name:'Sanjana Jayswal',dept:'Comp Science',city:'Ahmedabad'}
+    {id:3,name:'Sanjana Jayswal',dept:'Comp Science',city:'Ahmedabad'},
+    {id:4,name:'Shreyas Trivedi',dept:'Chem',city:'Delhi'},
   ];
 
 

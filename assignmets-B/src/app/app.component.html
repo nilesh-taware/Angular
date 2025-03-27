@@ -1,49 +1,17 @@
-<div class="header-image">
-  <img src="https://d585tldpucybw.cloudfront.net/sfimages/default-source/blogs/templates/angulart2-light-1200x303.png?sfvrsn=4af99b70_4" alt="Header Image" class="img-fluid" width="100%" height="10%">
+<div>
+  <app-header></app-header>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">MCA</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div>
+  <app-navbar></app-navbar>
+</div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/staff']" routerLinkActive="router-link-active" ><b>STAFF</b> </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/employee']"><b>EMPLOYEE</b></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/api-call']"><b>Http Call</b></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/data-filter']"><b>Filter Pipe</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/student-data']"><b>Student</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/news']"><b>Live News</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/ticket']"><b>Booking</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/syllabus']"><b>Syllabus</b></a>
-      </li>
-
-    </ul>
-
-  </div>
-</nav>
 <div>
   <router-outlet>
 
   </router-outlet>
 </div>
+
 <div>
   <app-footer>
 
