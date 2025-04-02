@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -14,11 +12,14 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent {
   username = '';
   password = '';
-  
+
   isLoggedIn = false;
   message = '';
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID)private platformId:object) {
+    if(isPlatformBrowser(this.platformId)){
+      localStorage.setItem('key','value');
+    }
     // Check if the user is already logged in
     const storedUser = localStorage.getItem('user');
     if (storedUser) {

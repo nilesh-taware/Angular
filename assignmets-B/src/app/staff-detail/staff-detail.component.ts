@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { CustomPipe } from '../pipes/custom.pipe';
 
 @Component({
   selector: 'app-staff-detail',
   standalone: true,
-  imports: [RouterModule,FormsModule,CommonModule],
+  imports: [RouterModule,FormsModule,CommonModule,CustomPipe],
   templateUrl: './staff-detail.component.html',
   styleUrl: './staff-detail.component.css'
 })

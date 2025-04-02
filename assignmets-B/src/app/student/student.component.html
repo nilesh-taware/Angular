@@ -1,0 +1,57 @@
+<div class="container mt-4">
+  <h2 class="text-center">Student Management</h2>
+
+  <div class="card p-3">
+    <h4>Add / Update Student</h4>
+    <div class="mb-2">
+      <label>Roll No:</label>
+      <input type="number" [(ngModel)]="student.rollNo" class="form-control" />
+    </div>
+    <div class="mb-2">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="student.name" class="form-control" />
+    </div>
+    <div class="mb-2">
+      <label>Course:</label>
+      <input type="text" [(ngModel)]="student.course" class="form-control" />
+    </div>
+    <button (click)="addOrUpdateStudent()" class="btn btn-success me-2">
+      Save
+    </button>
+    <button (click)="clearForm()" class="btn btn-secondary">Clear</button>
+  </div>
+
+  <div class="mt-4">
+    <h4>Student List</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of students">
+          <td>{{ s.rollNo }}</td>
+          <td>{{ s.name | custom}}</td>
+          <td>{{ s.course }}</td>
+          <td>
+            <button (click)="editStudent(s)" class="btn btn-primary btn-sm">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button
+              (click)="deleteStudent(s.rollNo)"
+              class="btn btn-danger btn-sm ms-2"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

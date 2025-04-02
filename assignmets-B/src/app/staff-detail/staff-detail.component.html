@@ -10,8 +10,8 @@
   <tbody>
     <tr *ngFor="let staff of staffDetails;let i= index">
       <th scope="row">{{i+1}}</th>
-      <td>{{staff.id}}</td>
-    <td>{{staff.name}}</td>
+      <td>{{staff.id }}</td>
+    <td>{{staff.name | custom}}</td>
     <td>{{staff.department}}</td>
     <td>{{staff.position}}</td>
     </tr>
