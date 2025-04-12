@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  slideOne:string="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg"
 
 }

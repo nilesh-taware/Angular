@@ -1,0 +1,122 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Contact Us</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <!-- First Name -->
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input
+        id="firstName"
+        type="text"
+        class="form-control"
+        formControlName="firstName"
+        [ngClass]="{ 'is-invalid': contactForm.get('firstName')?.touched && contactForm.get('firstName')?.invalid }"
+      />
+      <div class="invalid-feedback" *ngIf="contactForm.get('firstName')?.touched && contactForm.get('firstName')?.invalid">
+        <div *ngIf="contactForm.get('firstName')?.errors?.['required']">First name is required.</div>
+        <div *ngIf="contactForm.get('firstName')?.errors?.['pattern']">Only alphabets (2-30 characters).</div>
+      </div>
+    </div>
+
+    <!-- Last Name -->
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input
+        id="lastName"
+        type="text"
+        class="form-control"
+        formControlName="lastName"
+        [ngClass]="{ 'is-invalid': contactForm.get('lastName')?.touched && contactForm.get('lastName')?.invalid }"
+      />
+      <div class="invalid-feedback" *ngIf="contactForm.get('lastName')?.touched && contactForm.get('lastName')?.invalid">
+        <div *ngIf="contactForm.get('lastName')?.errors?.['required']">Last name is required.</div>
+        <div *ngIf="contactForm.get('lastName')?.errors?.['pattern']">Only alphabets (2-30 characters).</div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+        [ngClass]="{ 'is-invalid': contactForm.get('email')?.touched && contactForm.get('email')?.invalid }"
+      />
+      <div class="invalid-feedback">Valid email is required.</div>
+    </div>
+
+    <!-- Mobile -->
+    <div class="mb-3">
+      <label for="mobile" class="form-label">Mobile Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="mobile"
+        formControlName="mobile"
+        [ngClass]="{ 'is-invalid': contactForm.get('mobile')?.touched && contactForm.get('mobile')?.invalid }"
+      />
+      <div class="invalid-feedback">
+        Valid mobile number is required (10 digits).
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <textarea
+        class="form-control"
+        id="address"
+        formControlName="address"
+        rows="2"
+        [ngClass]="{ 'is-invalid': contactForm.get('address')?.touched && contactForm.get('address')?.invalid }"
+      ></textarea>
+      <div class="invalid-feedback">
+        Address is required (min 10, max 200 characters).
+      </div>
+    </div>
+
+    <!-- Row: State, City, Country -->
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="state" class="form-label">State</label>
+        <input
+          type="text"
+          class="form-control"
+          id="state"
+          formControlName="state"
+          [ngClass]="{ 'is-invalid': contactForm.get('state')?.touched && contactForm.get('state')?.invalid }"
+        />
+        <div class="invalid-feedback">State is required.</div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="city" class="form-label">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="city"
+          formControlName="city"
+          [ngClass]="{ 'is-invalid': contactForm.get('city')?.touched && contactForm.get('city')?.invalid }"
+        />
+        <div class="invalid-feedback">City is required.</div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          formControlName="country"
+          [ngClass]="{ 'is-invalid': contactForm.get('country')?.touched && contactForm.get('country')?.invalid }"
+        />
+        <div class="invalid-feedback">Country is required.</div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+  </form>
+</div>

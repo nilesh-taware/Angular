@@ -13,17 +13,28 @@ import { ProfileComponent } from './profile/profile.component';
 import { NewsComponent } from './news/news.component';
 import { StudentComponent } from './student/student.component';
 import { AnimatorComponent } from './animator/animator.component';
+import { VideosearchComponent } from './videosearch/videosearch.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
-
+  // {
+  //   path: '',
+  //   redirectTo: 'login',
+  //   pathMatch: 'full',
+  // },
   {
-    path:'',
-    redirectTo:'login',
-    pathMatch:'full'
+    path: 'gallery',
+    component: GalleryComponent,
   },
   {
     path: 'staff',
     component: StaffDetailComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactUsComponent,
   },
   {
     path: 'employee',
@@ -42,26 +53,34 @@ export const routes: Routes = [
     component: StudentdataComponent,
   },
   {
-    path:'news',component:NewsComponent
+    path: 'news',
+    component: NewsComponent,
   },
   {
-    path:'ticket',component:TicketbookingComponent
+    path: 'ticket',
+    component: TicketbookingComponent,
   },
   {
-    path:'syllabus',component:SyllabusComponent
+    path: 'syllabus',
+    component: SyllabusComponent,
   },
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path:'student',
-    component:StudentComponent
+    path: 'student',
+    component: StudentComponent,
   },
 
   {
-    path:'animator',
-    component:AnimatorComponent
-  }
-
+    path: 'animator',
+    component: AnimatorComponent,
+  },
+  {
+    path: 'youtube',
+    component: VideosearchComponent,
+  },
+  
+  { path: '**', component: PagenotfoundComponent },
 ];

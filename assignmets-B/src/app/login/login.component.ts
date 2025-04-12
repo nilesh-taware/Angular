@@ -5,9 +5,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
   username = '';
@@ -16,9 +16,9 @@ export class LoginComponent {
   isLoggedIn = false;
   message = '';
 
-  constructor(@Inject(PLATFORM_ID)private platformId:object) {
-    if(isPlatformBrowser(this.platformId)){
-      localStorage.setItem('key','value');
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('key', 'value');
     }
     // Check if the user is already logged in
     const storedUser = localStorage.getItem('user');
@@ -38,7 +38,6 @@ export class LoginComponent {
     }
   }
 
-
   logout() {
     localStorage.removeItem('user');
     this.isLoggedIn = false;
@@ -46,5 +45,4 @@ export class LoginComponent {
     this.password = '';
     this.message = 'You have been logged out successfully!';
   }
-
 }

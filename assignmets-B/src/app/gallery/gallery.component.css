@@ -1,0 +1,21 @@
+.gallery-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.gallery-card {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.gallery-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}

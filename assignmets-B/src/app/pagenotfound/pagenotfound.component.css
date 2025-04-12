@@ -1,34 +1,175 @@
-body {
-  background: linear-gradient(135deg, #ff6f61, #d6a4a4);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  text-align: center;
+.main {
+  margin-top: 15%;
 }
-.error-container {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding: 3rem;
-  max-width: 600px;
-  margin: auto;
+
+.st0 {
+  fill: #fff;
 }
-.error-title {
-  font-size: 6rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+.st2 {
+  fill: #5d89af;
 }
-.error-message {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+.st3 {
+  fill: #709abf;
 }
-.btn-primary {
-  background-color: #ff6f61;
-  border-color: #ff6f61;
+.st4,
+.st6 {
+  fill: #fff;
+  stroke: #b3dcdf;
+  stroke-miterlimit: 10;
 }
-.btn-primary:hover {
-  background-color: #d9534f;
-  border-color: #d9534f;
+.st6 {
+  stroke: #5d89af;
+  stroke-width: 2;
+}
+.st7,
+.st8,
+.st9 {
+  stroke: #709abf;
+  stroke-miterlimit: 10;
+}
+
+.st7 {
+  stroke-width: 5;
+  stroke-linecap: round;
+  fill: none;
+}
+.st8,
+.st9 {
+  fill: #fff;
+}
+.st9 {
+  fill: none;
+}
+
+#cloud1 {
+  animation: cloud003 15s linear infinite;
+}
+
+#cloud2 {
+  animation: cloud002 25s linear infinite;
+}
+
+#cloud3 {
+  animation: cloud003 20s linear infinite;
+}
+
+#cloud4 {
+  animation: float 4s linear infinite;
+}
+
+#cloud5 {
+  animation: float 8s linear infinite;
+}
+
+#cloud7 {
+  animation: float 5s linear infinite;
+}
+
+#tracks {
+  animation: slide 650ms linear infinite;
+}
+
+#bumps {
+  animation: land 10000ms linear infinite;
+}
+
+@keyframes jig {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#car-layers {
+  animation: jig 0.35s linear infinite;
+}
+
+@keyframes land {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+/* @keyframes cloudFloat {
+  0% { transform: translateX(0) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+} */
+
+@keyframes cloud001 {
+  0% {
+    transform: translateX(-1000px) translateY(3px);
+  }
+  100% {
+    transform: translateX(1000px) translateY(0);
+  }
+}
+
+@keyframes cloud002 {
+  0% {
+    transform: translateX(-1000px) translateY(3px);
+  }
+  100% {
+    transform: translateX(1000px) translateY(0);
+  }
+}
+
+@keyframes cloud003 {
+  0% {
+    transform: translateX(-1000px) translateY(3px);
+  }
+  100% {
+    transform: translateX(1000px) translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0);
+  }
+  50% {
+    transform: translateY(8px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0);
+  }
+}
+
+#bracefront,
+#braceback {
+  animation: braces 1s linear infinite;
+}
+
+@keyframes braces {
+  0% {
+    transform: translateX(-2px);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
 }

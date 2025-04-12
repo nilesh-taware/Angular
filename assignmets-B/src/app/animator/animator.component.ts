@@ -1,12 +1,13 @@
 import {trigger,transition,style,animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @Component({
   selector: 'app-animator',
   standalone: true,
   templateUrl: './animator.component.html',
   styleUrls: ['./animator.component.css'],
-  imports: [CommonModule],
+  imports: [CommonModule,BrowserAnimationsModule],
   animations: [
     trigger('slideInBottom', [
       transition(':enter', [
@@ -27,6 +28,9 @@ export class AnimatorComponent {
       ? (this.imageVisible = true)
       : (this.imageVisible = false);
   }
+
 }
 
 //Add provideAnimations() in your app.config file get get animation effescts
+1.
+

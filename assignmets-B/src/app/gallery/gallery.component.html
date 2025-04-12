@@ -1,0 +1,49 @@
+<div class="container py-5">
+  <h2 class="text-center mb-4">Angular Image Gallery</h2>
+  <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+    <div class="col" *ngFor="let image of images">
+      <div class="gallery-card">
+        <img
+          [src]="image"
+          alt="Gallery Image"
+          class="gallery-img w-100"
+          loading="lazy"
+          (click)="openModal(image)"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          style="cursor: pointer"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div
+  class="modal fade"
+  id="imageModal"
+  tabindex="-1"
+  aria-labelledby="imageModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <img
+          [src]="selectedImage"
+          class="img-fluid rounded"
+          alt="Large Preview"
+        />
+      </div>
+    </div>
+  </div>
+</div>
