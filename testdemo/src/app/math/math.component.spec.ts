@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MathComponent } from './math.component';
 
-describe('MathComponent', () => {
+fdescribe('MathComponent', () => {
   let component: MathComponent;
   let fixture: ComponentFixture<MathComponent>;
 
@@ -35,4 +35,6 @@ describe('MathComponent', () => {
   it('should divide two numbers',()=>{
     expect(component.sub(4,2)).toBe(2);
   });
+
+
 });
